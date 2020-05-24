@@ -41,12 +41,8 @@ send_button=tkinter.Button(top,text="Send",command=send)
 send_button.pack()
 
 top.protocol("WM_DELETE_WINDOW",on_closing)
-try:
-    Host="192.168.0.12"
-    Port=8080
-except:
-    Host=input("Enter Host: ")
-    Port=int(input("Enter Port: "))
+Host=input("Enter Host: ")
+Port=int(input("Enter Port: "))
 
 BUFSIZ=1024
 ADDR=(Host,Port)
